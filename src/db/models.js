@@ -1,9 +1,18 @@
 const Sequelize = require('sequelize')
 
-const db = new Sequelize('socialapp','appuser','mypass',{
-    host:'localhost',
-    dialect:'mysql'
-})
+let db;
+
+if(process.env.NODE_ENV == 'testing'){
+    db = new Sequelize({
+        dialect: 'sqlite',
+        storage:  __dirname + '/../../test/test.db' 
+    })
+}else{
+    db = new Sequelize('soialapp','appuser','mypass',{
+        host:'localhost',
+        dialect:'mysql'
+    })    
+}
 
 const DEF_ID = {
     type:Sequelize.INTEGER,

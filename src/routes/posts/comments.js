@@ -3,7 +3,7 @@ const route = require('express').Router()
 const {
     showAllcomments,
     createComment
-} = require('../../contollers/comments')
+} = require('../../controllers/comments')
 
 route.get('/',async (req,res)=>{
     const comments = await showAllcomments(req.query.postId)

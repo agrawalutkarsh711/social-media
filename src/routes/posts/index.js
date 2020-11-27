@@ -3,7 +3,7 @@ const route = require('express').Router()
 const {
     showAllposts,
     createNewpost
-} = require('../../contollers/posts')
+} = require('../../controllers/posts')
 
 route.get('/',async(req,res)=>{
     const posts = await showAllposts()

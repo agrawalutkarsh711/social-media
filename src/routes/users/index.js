@@ -4,7 +4,7 @@ const {
     createAnonuser,
     getUserById,
     getUserByUsername
-} = require('../../contollers/users')
+} = require('../../controllers/users')
 
 route.get('/:id',async(req,res)=>{
 
