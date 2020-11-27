@@ -1,0 +1,25 @@
+#navbar{
+    position:sticky;
+    top:0px;
+    z-index: 1;
+}
+
+#footer{
+    padding:0.5rem;
+    padding-top:1rem;
+    position:sticky;
+    bottom:0px;
+    background-color: var(--light);
+}
+
+#content{
+    height:auto;
+}
+
+#comments-box{
+    padding:0.5rem;
+    padding-top:1rem;
+    position:sticky;
+    bottom:104px;
+    background-color: var(--light);
+}
