@@ -12,6 +12,9 @@ async function createAnonuser(){
 }
 
 async function getUserById(id){
+    if(!NaN(id)){
+        throw new Error("userid is not a number")
+    }
     return Users.findOne({
         where:{id}
     })
